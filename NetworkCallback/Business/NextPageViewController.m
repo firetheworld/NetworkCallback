@@ -8,11 +8,15 @@
 
 #import "NextPageViewController.h"
 #import "NetService.h"
+#import "RequestAPI.h"
 
-@interface NextPageViewController ()
+@interface NextPageViewController () <NetWorkDelegate>
 
 @property (nonatomic, strong) NetService* service;
 @property (nonatomic, strong) NSMutableArray* pageArray; // 模拟分页请求
+
+@property (nonatomic, strong) RequestAPI *apiOne;
+@property (nonatomic, strong) RequestAPI *apiTwo;
 
 @end
 
@@ -67,6 +71,13 @@
 
 #pragma mark - Delegate request
 - (void)delegateDemo {
-	
+	self.apiOne.delegate = self;
+	[self.apiOne requestWithParms:nil];
 }
+
+#pragma mark - NetWorkDelegate
+- (void)networkFinishWithSuccess:(id)data AndError:(NSError *)error {
+	NSLog(@"Result from Delegate:%@", data);
+}
+
 @end

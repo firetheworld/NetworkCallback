@@ -33,4 +33,25 @@ const int NET_DELAY = 5;
 	});
 }
 
+- (void)requestWithParms:(NSDictionary *)parms {
+	int delay = NET_DELAY;
+	
+	if ([parms valueForKey:@"delayTime"] != nil) {
+		delay = (int)[parms valueForKey:@"delayTime"];
+	}
+	
+	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+		
+		// 判断成功
+		// 判断失败
+		
+		NSString *resultData = @"This is a Mock Data!!";
+		NSLog(@"Network Finish:%@",resultData);
+		// 这里加了判断
+		if (self.delegate && [self.delegate respondsToSelector:@selector(networkFinishWithSuccess:AndError:)]) {
+			[self.delegate networkFinishWithSuccess:resultData AndError:nil];
+		}
+	});
+}
+
 @end

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
 /*
  Block 模式
  */
@@ -27,6 +28,8 @@ typedef void (^NetErrorBlock)(NSError *error); // 访问失败block
 
 @interface NetService : NSObject
 
+@property (nonatomic, weak, nullable) id<NetWorkDelegate> delegate;
+
 /**
  模拟Block请求方法
 
@@ -43,3 +46,4 @@ typedef void (^NetErrorBlock)(NSError *error); // 访问失败block
 - (void)requestWithParms:(NSDictionary *)parms;
 
 @end
+NS_ASSUME_NONNULL_END

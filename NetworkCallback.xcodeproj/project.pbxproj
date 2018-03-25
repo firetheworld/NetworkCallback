@@ -16,6 +16,7 @@
 		46B9012E2067B0A100F9E496 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B901282067B0A000F9E496 /* ViewController.m */; };
 		46B9012F2067B0A100F9E496 /* NextPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46B9012A2067B0A000F9E496 /* NextPageViewController.xib */; };
 		46B901322067B0ED00F9E496 /* NetService.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B901312067B0ED00F9E496 /* NetService.m */; };
+		46B901392067D9ED00F9E496 /* RequestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B901382067D9ED00F9E496 /* RequestAPI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		46B9012B2067B0A000F9E496 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		46B901302067B0ED00F9E496 /* NetService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetService.h; sourceTree = "<group>"; };
 		46B901312067B0ED00F9E496 /* NetService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetService.m; sourceTree = "<group>"; };
+		46B901372067D9ED00F9E496 /* RequestAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestAPI.h; sourceTree = "<group>"; };
+		46B901382067D9ED00F9E496 /* RequestAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestAPI.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +97,20 @@
 		46B9012C2067B0A000F9E496 /* NetService */ = {
 			isa = PBXGroup;
 			children = (
+				46B901362067D9ED00F9E496 /* API */,
 				46B901302067B0ED00F9E496 /* NetService.h */,
 				46B901312067B0ED00F9E496 /* NetService.m */,
 			);
 			path = NetService;
+			sourceTree = "<group>";
+		};
+		46B901362067D9ED00F9E496 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				46B901372067D9ED00F9E496 /* RequestAPI.h */,
+				46B901382067D9ED00F9E496 /* RequestAPI.m */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +189,7 @@
 				46B9011B2067AE8400F9E496 /* main.m in Sources */,
 				46B9012E2067B0A100F9E496 /* ViewController.m in Sources */,
 				46B901322067B0ED00F9E496 /* NetService.m in Sources */,
+				46B901392067D9ED00F9E496 /* RequestAPI.m in Sources */,
 				46B9010D2067AE8400F9E496 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
