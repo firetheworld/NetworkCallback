@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "NextPageViewController.h"
 
 @interface ViewController ()
 
@@ -14,16 +15,18 @@
 
 @implementation ViewController
 
+#pragma mark - VC life Cycle
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
 
-- (void)didReceiveMemoryWarning {
-	[super didReceiveMemoryWarning];
-	// Dispose of any resources that can be recreated.
+#pragma mark - Actions
+
+- (IBAction)jumpToNextPage:(UIButton *)sender {
+	
+	NextPageViewController *vc = [[NextPageViewController alloc] initWithNibName:@"NextPageViewController" bundle:[NSBundle mainBundle]];
+	[self.navigationController pushViewController:vc animated:YES];
 }
-
-
 @end
