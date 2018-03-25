@@ -53,7 +53,6 @@
 		
 		// 处理业务逻辑
 		// ...
-		[data addObject:weakSelf.pageArray];
 		
 		// 导致crash
 //		NSMutableArray *muteArray = outsideArray.mutableCopy;
