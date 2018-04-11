@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46514FE4207DF7180021AC68 /* CallbackObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 46514FE3207DF7180021AC68 /* CallbackObj.m */; };
 		46B9010D2067AE8400F9E496 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B9010C2067AE8400F9E496 /* AppDelegate.m */; };
 		46B901132067AE8400F9E496 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46B901112067AE8400F9E496 /* Main.storyboard */; };
 		46B901152067AE8400F9E496 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46B901142067AE8400F9E496 /* Assets.xcassets */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46514FE2207DF7180021AC68 /* CallbackObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallbackObj.h; sourceTree = "<group>"; };
+		46514FE3207DF7180021AC68 /* CallbackObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CallbackObj.m; sourceTree = "<group>"; };
 		46B901082067AE8400F9E496 /* NetworkCallback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkCallback.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46B9010B2067AE8400F9E496 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		46B9010C2067AE8400F9E496 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,6 +93,8 @@
 				46B9012A2067B0A000F9E496 /* NextPageViewController.xib */,
 				46B9012B2067B0A000F9E496 /* ViewController.h */,
 				46B901282067B0A000F9E496 /* ViewController.m */,
+				46514FE2207DF7180021AC68 /* CallbackObj.h */,
+				46514FE3207DF7180021AC68 /* CallbackObj.m */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 				46B9012E2067B0A100F9E496 /* ViewController.m in Sources */,
 				46B901322067B0ED00F9E496 /* NetService.m in Sources */,
 				46B901392067D9ED00F9E496 /* RequestAPI.m in Sources */,
+				46514FE4207DF7180021AC68 /* CallbackObj.m in Sources */,
 				46B9010D2067AE8400F9E496 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +333,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54LMN39WV7;
 				INFOPLIST_FILE = NetworkCallback/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.datayes.NetworkCallback;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -341,6 +348,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54LMN39WV7;
 				INFOPLIST_FILE = NetworkCallback/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.datayes.NetworkCallback;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -8,17 +8,26 @@
 
 #import "ViewController.h"
 #import "NextPageViewController.h"
+#import "CallbackObj.h"
 
-@interface ViewController ()
+#define LOOPCOUNT 10000
+
+@interface ViewController () <CallbackDelegate>
+
+@property (nonatomic, strong) CallbackObj *callbackObj;
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
+	NSDate * _stratDate;
+}
 
 #pragma mark - VC life Cycle
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+	self.callbackObj = [CallbackObj shareInstance];
+	self.callbackObj.delegate = self;
 }
 
 
@@ -28,5 +37,31 @@
 	
 	NextPageViewController *vc = [[NextPageViewController alloc] initWithNibName:@"NextPageViewController" bundle:[NSBundle mainBundle]];
 	[self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)testBlock:(UIButton *)sender {
+	
+	NSDate *start = [NSDate date];
+	
+	for (int i = 0; i < LOOPCOUNT; i++) {
+		[self.callbackObj testBlock:^{
+			NSTimeInterval timeInterval = [start timeIntervalSinceNow];
+			NSLog(@"testBlock:%f", timeInterval);
+		}];
+	}
+}
+
+- (IBAction)testDelegate:(UIButton *)sender {
+	_stratDate = [NSDate date];
+	
+	for (int i = 0; i < LOOPCOUNT; i++) {
+		[self.callbackObj testDelegate];
+	}
+}
+
+#pragma mark - Delegate
+- (void)hasCallBack {
+	NSTimeInterval timeInterval = [_stratDate timeIntervalSinceNow];
+	NSLog(@"testDelegate:%f", timeInterval);
 }
 @end
